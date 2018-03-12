@@ -34,13 +34,13 @@ public class SinglyLinkedListImpl<T> {
         System.out.println("Deleted: "+tmp.value);
     }
      
-    public void addAt(T element, int pos){
+    public void addAt(int pos, T element){
          
         Node<T> tmp = head;
         Node<T> nd = new Node<T>();
+        nd.value=element;
         
         if(pos == 0){
-            nd.value=element;
             nd.next=head;
             head=nd;
             size++;
@@ -50,7 +50,6 @@ public class SinglyLinkedListImpl<T> {
 	        if(pos <= size){
 	        for(int i=1;i <= size; i++){
 	            if(i == pos){
-	                nd.value=element;
 	                nd.next=tmp.next;
 	                size++;
 	                tmp.next=nd;
@@ -92,7 +91,7 @@ public class SinglyLinkedListImpl<T> {
         }
     }
     
-    public T getLastNode(int n){
+    public T getNthLastNode(int n){
 		Node<T> slow = head;
 		Node<T> fast = head;
 		int start = 1;
@@ -143,9 +142,9 @@ public class SinglyLinkedListImpl<T> {
         sl.add(49);
         sl.add(59);
         sl.traverse();
-        System.out.println("Nth last node ::"+sl.getLastNode(2));
+        System.out.println("Nth last node ::"+sl.getNthLastNode(2));
         System.out.println("Middle node ::"+sl.getMiddleNode());
-        //sl.addAt(76, 1);
+        //sl.addAt(1,76);
         //sl.deleteAt(0);
         //sl.deleteFront();
         //sl.deleteAt(3);

@@ -48,8 +48,7 @@ public class QueueImpl<T> {
         sl.dequeue();
         sl.enquue(22);
         sl.enquue(33);
-        sl.dequeue();
-        sl.dequeue();
+        sl.display();
     }
     
     class Node<T> implements Comparable<T> {

@@ -1,5 +1,7 @@
 package com.example.datastructures;
 
+import com.example.datastructures.QueueImpl.Node;
+
 public class StackImpl<T> {
 	 
     private Node<T> top;
@@ -28,6 +30,16 @@ public class StackImpl<T> {
     	else
     		return null;
     }
+    
+    public void display(){
+    	Node<T> tmp = top;
+    	while(true){
+    		if(tmp == null)
+    			break;
+    		System.out.println(tmp.value);
+    		tmp = tmp.next;
+    	}
+    }
      
      
     public static void main(String a[]){
@@ -36,8 +48,9 @@ public class StackImpl<T> {
         sl.push(32);
         sl.push(54);
         sl.pop();
-        sl.pop();
+        //sl.pop();
         sl.push(89);
+        sl.display();
     }
     
     class Node<T> implements Comparable<T> {

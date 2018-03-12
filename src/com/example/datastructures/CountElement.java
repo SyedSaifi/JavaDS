@@ -18,9 +18,7 @@ public class CountElement {
 		Map<String, Integer> wordCount = new HashMap<String, Integer>();
 
 		for(String word: list) {
-		  Integer count = wordCount.get(word);  
-		  System.out.println("count ::"+count);
-		  wordCount.put(word, (count==null) ? 1 : count+1);
+		  wordCount.put(word, (wordCount.get(word) == null) ? 1 : wordCount.get(word)+1);
 		}
 		
 		Iterator it = wordCount.entrySet().iterator();
