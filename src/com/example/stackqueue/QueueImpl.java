@@ -1,4 +1,4 @@
-package com.example.datastructures;
+package com.example.stackqueue;
 
 public class QueueImpl<T> {
 	 

@@ -1,4 +1,4 @@
-package com.example.datastructures;
+package com.example.linkedlist;
 
 public class SinglyLinkedListImpl<T> {
 	 
@@ -90,41 +90,7 @@ public class SinglyLinkedListImpl<T> {
 	        }
         }
     }
-    
-    public T getNthLastNode(int n){
-		Node<T> slow = head;
-		Node<T> fast = head;
-		int start = 1;
-		
-		while(fast.next != null){
-			fast = fast.next;
-			start++;
-			
-		if(start > n)
-			slow = slow.next;
-		}
-		
-		return slow.value;
-	}
-    
-    public T getMiddleNode(){
-		Node<T> slow = head;
-		Node<T> fast = head;
-		int length = 0;
-		
-		while(fast.next != null){
-			fast = fast.next;
-			length++;
-			
-		if(length%2==0)
-			slow = slow.next;
-		}
-		
-		return slow.value;
-	}
-     
     public void traverse(){
-         
         Node<T> tmp = head;
         while(tmp != null){
             System.out.println(tmp.value);
@@ -132,6 +98,16 @@ public class SinglyLinkedListImpl<T> {
         }
     }
      
+    public int getCount(Node<T> node) {
+    	int count = 0;
+    	Node<T> current = node;
+    	while(current != null) {
+    		count++;
+    		current = current.next;
+    	}
+    	return count;
+    }
+    
     public static void main(String a[]){
         SinglyLinkedListImpl<Integer> sl = new SinglyLinkedListImpl<Integer>();
         sl.add(3);
@@ -142,8 +118,7 @@ public class SinglyLinkedListImpl<T> {
         sl.add(49);
         sl.add(59);
         sl.traverse();
-        System.out.println("Nth last node ::"+sl.getNthLastNode(2));
-        System.out.println("Middle node ::"+sl.getMiddleNode());
+        System.out.println("Count is :: "+ sl.getCount(sl.head));
         //sl.addAt(1,76);
         //sl.deleteAt(0);
         //sl.deleteFront();

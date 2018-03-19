@@ -1,4 +1,4 @@
-package com.example.datastructures;
+package com.example.treeset;
 
 class BinarySearchTree<T> {
 	class Node<T> {

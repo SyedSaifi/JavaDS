@@ -1,6 +1,4 @@
-package com.example.datastructures;
-
-import com.example.datastructures.QueueImpl.Node;
+package com.example.stackqueue;
 
 public class StackImpl<T> {
 	 

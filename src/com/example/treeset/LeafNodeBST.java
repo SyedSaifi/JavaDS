@@ -1,4 +1,4 @@
-package com.example.datastructures;
+package com.example.treeset;
 
 public class LeafNodeBST<T> {
 	class Node<T> {

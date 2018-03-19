@@ -1,4 +1,4 @@
-package com.example.datastructures;
+package com.example.linkedlist;
 
 public class NthLastElementLinkedList<T> extends SinglyLinkedListImpl<T>{
 
@@ -12,10 +12,10 @@ public class NthLastElementLinkedList<T> extends SinglyLinkedListImpl<T>{
 		sl.traverse();
 		
 		NthLastElementLinkedList<Integer> nth = new NthLastElementLinkedList<>();
-		nth.getLastNode(3);
+		System.out.println("Nth last element is :: "+nth.getLastNode(3, sl.head));
 	}
 	
-	public T getLastNode(int n){
+	public T getLastNode(int n, Node<T> head){
 		Node<T> slow = head;
 		Node<T> fast = head;
 		int start = 1;

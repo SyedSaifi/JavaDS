@@ -1,4 +1,4 @@
-package com.example.datastructures;
+package com.example.stackqueue;
 
 import java.util.Scanner;
 
