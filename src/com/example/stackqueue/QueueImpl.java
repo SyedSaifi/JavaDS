@@ -6,7 +6,7 @@ public class QueueImpl<T> {
      
     public void enquue(T element){
         Node<T> nd = new Node<T>();
-        nd.value=element;
+        nd.setValue(element);
         
         if(front == null)
         	front = nd;

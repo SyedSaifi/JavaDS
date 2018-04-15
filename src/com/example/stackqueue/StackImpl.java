@@ -6,7 +6,7 @@ public class StackImpl<T> {
      
     public void push(T element){
         Node<T> nd = new Node<T>();
-        nd.value=element;
+        nd.setValue(element);
         
         if(top == null)
         	top = nd;

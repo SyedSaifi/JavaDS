@@ -8,7 +8,6 @@ public class IntersectingNodeLinkedList {
     	
         int c1 = s1.getCount(head1);
         int c2 = s2.getCount(head2);
-        int d;
  
         if (c1 > c2) 
             return IntersectingNodeLinkedList.getIntesectionNode(c1-c2, head1, head2);
@@ -16,9 +15,9 @@ public class IntersectingNodeLinkedList {
             return IntersectingNodeLinkedList.getIntesectionNode(c2-c1, head2, head1);
     }
  
-    private static <T> int getIntesectionNode(int d, Node<T> node1, Node<T> node2) {
-        Node current1 = node1;
-        Node current2 = node2;
+    private static <T> int getIntesectionNode(int d, Node<T> head1, Node<T> head2) {
+        Node current1 = head1;
+        Node current2 = head2;
         
         for (int i = 0; i < d; i++) {
             if (current1 == null) {

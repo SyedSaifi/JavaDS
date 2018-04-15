@@ -8,7 +8,7 @@ public class SinglyLinkedListImpl<T> {
      
     public void add(T element){
         Node<T> nd = new Node<T>();
-        nd.value=element;
+        nd.setValue(element);;
         size++;
 
         if(head == null){
@@ -38,7 +38,7 @@ public class SinglyLinkedListImpl<T> {
          
         Node<T> tmp = head;
         Node<T> nd = new Node<T>();
-        nd.value=element;
+        nd.setValue(element);
         
         if(pos == 0){
             nd.next=head;

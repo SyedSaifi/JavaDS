@@ -14,7 +14,7 @@ public class ReverseStack {
 		System.out.println("Enter a Number");
 		Scanner sc = new Scanner(System.in);
 		int i = sc.nextInt();
-		if(i!=-111){
+		if(i != 0){
 			reverseInput();
 			System.out.println(i);
 		}
