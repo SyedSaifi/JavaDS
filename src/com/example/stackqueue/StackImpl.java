@@ -29,14 +29,16 @@ public class StackImpl<T> {
     		return null;
     }
     
-    public void display(){
+    public void iterate(){
     	Node<T> tmp = top;
-    	while(true){
-    		if(tmp == null)
-    			break;
+    	while(tmp != null){
     		System.out.println(tmp.value);
-    		tmp = tmp.next;
+        	tmp = tmp.next;
     	}
+    }
+    	
+    public boolean isEmpty() {
+            return (top == null) ? true : false;
     }
      
      
@@ -48,7 +50,7 @@ public class StackImpl<T> {
         sl.pop();
         //sl.pop();
         sl.push(89);
-        sl.display();
+        sl.iterate();
     }
     
     class Node<T> implements Comparable<T> {

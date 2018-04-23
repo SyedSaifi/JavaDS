@@ -33,9 +33,7 @@ public class QueueImpl<T> {
     
     public void display(){
     	Node<T> tmp = front;
-    	while(true){
-    		if(tmp == null)
-    			break;
+    	while(tmp != null){
     		System.out.println(tmp.value);
     		tmp = tmp.next;
     	}

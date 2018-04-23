@@ -1,5 +1,8 @@
 package com.example.treeset;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class BinarySearchTree<T> {
 	class Node<T> {
 		public int value;
@@ -111,7 +114,23 @@ class BinarySearchTree<T> {
 		printPostOrderRec(currRoot.right);
 		System.out.print(currRoot.value + ", ");
 	}
-	//----------------------------------------------------------------------------
+	//------------------------------------------------------------------------------
+	public void levelOrderTraversal() {
+		 
+        Queue<Node> node = new LinkedList<>();
+        if(this.root == null) {
+            System.out.println("The tree is empty.");
+            return;
+        }
+        node.add(this.root);
+        while (!node.isEmpty()) {
+ 
+            Node tmpNode = node.remove();
+            if(tmpNode.left != null) { node.add(tmpNode.left); }
+            if(tmpNode.right != null) { node.add(tmpNode.right); }
+            System.out.print(tmpNode.value+" ");
+        }
+    }
 }
 
 public class BinarySearchTreeDemo {
@@ -126,6 +145,9 @@ public class BinarySearchTreeDemo {
 		bst.printPreorder();
 		System.out.println("Postorder Traversal");
 		bst.printPostorder();
+		System.out.println("Level Order Traversal");
+		bst.levelOrderTraversal();
+		System.out.println();
 		System.out.println("The minimum value in the BST: " + bst.findMinimum());
 		System.out.println("The maximum value in the BST: " + bst.findMaximum());
 	}
