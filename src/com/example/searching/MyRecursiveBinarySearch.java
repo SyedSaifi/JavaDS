@@ -16,7 +16,7 @@ public class MyRecursiveBinarySearch {
                 return mid;   
             }
         }
-        return -(start + 1);  
+        return -1;  
     }
  
     public static void main(String[] args) {

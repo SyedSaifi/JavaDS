@@ -93,7 +93,7 @@ public class SinglyLinkedListImpl<T> {
     public void traverse(){
         Node<T> tmp = head;
         while(tmp != null){
-            System.out.println(tmp.value);
+            System.out.print(tmp.value+"->");
             tmp = tmp.next;
         }
     }

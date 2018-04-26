@@ -33,7 +33,7 @@ public class MyQuickSort {
 			}
 		}
 		// call quickSort() method recursively
-		if (lowerIndex < j)
+		if (j > lowerIndex)
 			quickSort(array, lowerIndex, j);
 		if (i < higherIndex)
 			quickSort(array, i, higherIndex);

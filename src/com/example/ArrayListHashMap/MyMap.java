@@ -6,8 +6,6 @@ import java.util.Set;
 
 public class MyMap<K, V> {
   private int size=0;
-
-  @SuppressWarnings("unchecked")
   private MyEntry<K, V>[] arr = new MyEntry[16];
 
 

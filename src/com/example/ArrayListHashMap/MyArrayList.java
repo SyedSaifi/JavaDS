@@ -20,9 +20,7 @@ public class MyArrayList {
     }
      
     public void add(Object obj){
-        if(myStore.length-actSize <= 5){
-        	ensureCapacity();
-        }
+    	ensureCapacity();
         myStore[actSize++] = obj;
     }
      
@@ -49,8 +47,10 @@ public class MyArrayList {
     }
      
     private void ensureCapacity(){
-        myStore = Arrays.copyOf(myStore, myStore.length*2);
-        System.out.println("\nNew length: "+myStore.length);
+    	if(myStore.length-actSize <= 5){
+    		myStore = Arrays.copyOf(myStore, myStore.length*2);
+    		System.out.println("\nNew length: "+myStore.length);
+    	}
     }
      
     public static void main(String a[]){
